@@ -4,7 +4,7 @@ class GoControllerTest < ActionDispatch::IntegrationTest
 
   def setup
   end
-  
+
   test "go/home" do
     get go_home_url
     assert_response :success
@@ -20,4 +20,9 @@ class GoControllerTest < ActionDispatch::IntegrationTest
   	assert_response :success
   end
 
+  test 'go/contact' do 
+  	get go_contact_url 
+  	assert_response :success
+  end
+  
 end

@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootstrap-sass', '3.4.1'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
@@ -30,6 +31,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 group :production do 

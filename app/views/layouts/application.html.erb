@@ -7,9 +7,32 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html2shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "PCNs asasvc", "#", id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "home", root_path %></li>
+            <li><%= link_to 'help', go_help_path %></li>
+            <li><%= link_to 'log in', '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+
   </body>
 </html>
